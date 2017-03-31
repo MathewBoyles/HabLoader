@@ -1,0 +1,116 @@
+#loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+}
+#loading #zod {
+  bottom: 5px;
+  position: fixed;
+  left: 125px;
+  z-index: 1000001;
+}
+#loading #zod .speech {
+  display: absolute;
+  margin-left: -120px;
+}
+#loading #zod .goodbye .speech {
+  opacity: 0;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+}
+#loading #zod #firstline,
+#loading #zod #midline,
+#loading #zod #endline {
+  display: none;
+}
+#loading #zod #zodtalking {
+  margin-top: -60px;
+}
+#loading #zod #smilemouth,
+#loading #zod #zodtalking {
+  display: none;
+}
+#loading #zod #smilemouth {
+  margin-bottom: -10px;
+  margin-left: -1px;
+}
+#loading #background {
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000000;
+}
+#loading #background div {
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#loading #background div.background_backdrop {
+  background-image: url(images/background/reception_backdrop_stretch.png);
+  background-repeat: repeat;
+  background-size: 100%;
+}
+#loading #background div.background_right {
+  background-image: url(images/background/reception_backdrop_right.png);
+  background-position: right bottom;
+  background-size: auto;
+}
+#loading #background div.background_horizon {
+  background-image: url(images/background/reception_backdrop_horizon.png);
+  background-size: 1100px auto;
+}
+#loading #background div.background_wall {
+  background: #ff931e;
+  border-right: 2px solid black;
+  width: 108px;
+}
+#loading #background div.background_left {
+  background-image: url(images/background/reception_backdrop_left.png);
+  background-size: 900px auto;
+}
+#loading #loading-wrapper {
+  left: 50%;
+  margin: -90px 0 0 -152px;
+  position: fixed;
+  top: 50%;
+  -webkit-transition: left 1s ease 1.5s;
+  transition: left 1s ease 1.5s;
+  white-space: nowrap;
+  z-index: 1000003;
+}
+#loading #loading-wrapper #loading-wrap {
+  display: inline-block;
+  margin: 0 0 -4px -304px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+#loading:not(.resetting) #loading-wrapper #loading-wrap {
+  -webkit-transiton: width 0.5s;
+  transition: width 0.5s;
+}
+#loading.loaded #loading-wrapper {
+  opacity: 0;
+  transform: perspective(400px) translate3d(0, 0, 250px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+#loading.walkout #zod {
+  transition: left 3s, bottom 3s;
+  left: 5px;
+  bottom: -105px;
+}
+#loading.walkout #zod #smilemouth {
+  transform: rotateY(-190deg);
+  left:
+}
